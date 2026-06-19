@@ -1,0 +1,487 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pepsi Website</title>
+
+    <style>
+    *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+            background-color: black;
+            overflow-x: hidden;
+    }
+
+    header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: black;
+            padding: 15px 40px;
+            flex-wrap: wrap;
+            position: relative;
+    }
+
+    header img{
+            max-width: 100%;
+            height: auto;
+            position: absolute;
+            left: 40px;
+    }
+
+    nav {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 35px;
+            flex: 1;
+            margin: 0 auto;
+            flex-wrap: wrap;
+    }
+
+    nav a {
+            text-decoration: none;
+            color: white;
+            font-size: 18px;
+            transition: 0.3s;
+    }
+
+    nav a:hover {
+            color: skyblue;
+    }
+
+    #img {
+            width: 100%;
+            min-height: 100vh;
+            background-image: url(image1.png);
+            background-size: cover;
+            background-position: center;
+            border-top: 2px solid white;
+    }
+
+    .banner {
+            padding-left: 5%;
+            padding-top: 5%;
+            max-width: 100%;
+    }
+
+    .banner h1 {
+            font-size: 80px;
+            color: white;
+            line-height: 1.1;
+    }
+
+    .banner p {
+            color: white;
+            margin-top: 20px;
+            width: 500px;
+            font-size: 18px;
+            max-width: 100%;
+    }
+
+    button {
+            margin-top: 30px;
+            padding: 15px 40px;
+            border: none;
+            border-radius: 30px;
+            background-color: rgb(3, 3, 136);
+            color: white;
+            font-size: 18px;
+            cursor: pointer;
+            transition: 0.3s;
+    }
+
+    button:hover {
+            background-color: skyblue;
+            color: black;
+    }
+
+    .video-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 60px 20px;
+            background-color: black;
+    }
+
+    video {
+            width: 100%;
+            max-width: 800px;
+            height: auto;
+            border-radius: 15px;
+    }
+
+    .products-section {
+            width: 100%;
+            min-height: 100vh;
+            padding: 60px 20px;
+            text-align: center;
+            background: black;
+    }
+
+    .title {
+            font-size: 60px;
+            font-weight: 900;
+            margin-bottom: 50px;
+            text-transform: uppercase;
+            color: white;
+    }
+
+    .products-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 80px;
+            flex-wrap: wrap;
+    }
+
+    .product-card {
+            width: 280px;
+    }
+
+ .image-box {
+    width: 250px;
+    height: 250px;
+    margin: auto;
+    border-radius: 50%;
+    background: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100%;
+}
+.image-box img{
+    width: 180px;
+    max-width: 100%;
+    transition: 0.4s;
+}
+
+    .image-box img:hover {
+            transform: scale(1.08);
+    }
+
+    .product-title {
+            font-size: 22px;
+            font-weight: 900;
+            margin-top: 20px;
+            text-transform: uppercase;
+            color: white;
+    }
+
+    .btn {
+            display: inline-block;
+            margin-top: 30px;
+            padding: 15px 35px;
+            background: #17216e;
+            color: #fff;
+            border-radius: 40px;
+            text-decoration: none;
+    }
+
+    .btn:hover{
+        background-color:#0d2bff ;
+    }
+
+    .pulse-section {
+            width: 100%;
+            background: black;
+            padding: 80px 20px;
+            text-align: center;
+    }
+
+    .pulse-logo img {
+            width: 130px;
+            max-width: 100%;
+            margin-bottom: 20px;
+    }
+
+    .pulse-heading {
+            color: white;
+            font-size: 60px;
+            font-weight: 900;
+    }
+
+    .pulse-heading span {
+            display: block;
+            font-size: 95px;
+            color: #0d2bff;
+    }
+
+    .pulse-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 25px;
+            flex-wrap: wrap;
+            margin-top: 50px;
+    }
+
+    .pulse-card {
+            width: 380px;
+            height: 260px;
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            max-width: 100%;
+    }
+
+    .pulse-card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+    }
+
+    .footer {
+            border-top: 1px solid #222;
+            padding: 60px 20px 20px;
+            color: white;
+            background: black;
+    }
+
+    .footer-container {
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 60px;
+    }
+
+    .footer-left img {
+            width: 80px;
+            max-width: 100%;
+            margin-bottom: 15px;
+    }
+
+    .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+    }
+
+    .footer-links a {
+            color: white;
+            text-decoration: none;
+            font-size: 14px;
+    }
+
+    .footer-links a:hover {
+            color: skyblue;
+    }
+
+    .footer-bottom {
+            text-align: center;
+            margin-top: 40px;
+            border-top: 1px solid #222;
+            padding-top: 15px;
+            font-size: 13px;
+            opacity: 0.7;
+    }
+
+    /* ================= RESPONSIVE ================= */
+
+    @media (max-width: 1024px){
+        .banner h1{
+            font-size: 60px;
+        }
+
+        .pulse-heading span{
+            font-size: 70px;
+        }
+    }
+
+    @media (max-width: 768px) {
+
+        header {
+                flex-direction: column;
+                gap: 20px;
+        }
+
+        header img{
+                position: static;
+        }
+
+        nav {
+                justify-content: center;
+                gap: 15px;
+        }
+
+        .banner h1 {
+                font-size: 45px;
+        }
+
+        .banner p {
+                width: 100%;
+        }
+
+        .title{
+                font-size: 40px;
+        }
+
+        .pulse-heading{
+                font-size: 40px;
+        }
+
+        .pulse-heading span{
+                font-size: 55px;
+        }
+
+        .products-container,
+        .pulse-container,
+        .footer-container {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+        }
+
+        .product-card,
+        .pulse-card {
+                width: 100%;
+                max-width: 320px;
+        }
+    }
+
+    @media (max-width: 480px){
+
+        .banner h1{
+            font-size: 32px;
+        }
+
+        nav a{
+            font-size: 14px;
+        }
+
+        button{
+            padding: 12px 25px;
+            font-size: 16px;
+        }
+
+        .title{
+            font-size: 30px;
+        }
+
+        .pulse-heading span{
+            font-size: 40px;
+        }
+    }
+
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <img src="image.png" alt=""height="40px" width="40px">
+
+        <nav>
+            <a href="">BuyPepsi</a>
+            <a href="">Products</a>
+            <a href="">Recipes</a>
+            <a href="">FoodDeservesPepsi</a>
+            <a href="">ThePepsiChallenge</a>
+            <a href="">Contact</a>
+        </nav>
+    </header>
+
+    <div id="img">
+        <div class="banner">
+            <h1>PEPSI <br> PREBIOTIC <br> COLA</h1>
+            <p>Big taste. Real refreshment. 3g prebiotic fiber and no artificial sweeteners.</p>
+            <button>Discover</button>
+        </div>
+    </div>
+
+    <div class="video-section">
+        <video controls>
+            <source src="polar.mp4">
+        </video>
+    </div>
+
+    <section class="products-section">
+        <h1 class="title">OUR PRODUCTS</h1>
+
+        <div class="products-container">
+
+            <div class="product-card">
+                <div class="image-box"><img src="pepsi5.png"></div>
+                <h2 class="product-title">PEPSI WILD CHERRY</h2>
+                <a class="btn">Find Out More</a>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box"><img src="pepsi3.png"></div>
+                <h2 class="product-title">ZERO SUGAR</h2>
+                <a class="btn">Find Out More</a>
+            </div>
+
+            <div class="product-card">
+                <div class="image-box"><img src="pepsi4.png"></div>
+                <h2 class="product-title">DIET PEPSI</h2>
+                <a class="btn">Find Out More</a>
+            </div>
+
+        </div>
+    </section>
+
+    <section class="pulse-section">
+
+        <div class="pulse-logo">
+            <img src="image.png">
+        </div>
+
+        <h2 class="pulse-heading">STAY ON THE <br><span>PULSE</span></h2>
+
+        <div class="pulse-container">
+
+            <div class="pulse-card">
+                <img src="polar1.jpg">
+            </div>
+
+            <div class="pulse-card">
+                <img src="polar2.jpg">
+            </div>
+
+            <div class="pulse-card">
+                <img src="polar3.jpg">
+            </div>
+
+        </div>
+
+    </section>
+
+    <footer class="footer">
+
+        <div class="footer-container">
+
+            <div class="footer-left">
+                <img src="image.png">
+                <div class="social-icons">Facebook | Insta | X | YouTube</div>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Contact Us</a>
+                <a href="#">Privacy Policy</a>
+                <a href="#">Terms</a>
+            </div>
+
+            <div class="footer-links">
+                <a href="#">Careers</a>
+                <a href="#">FAQ</a>
+                <a href="#">Product Facts</a>
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+            2026 PepsiCo, Inc.
+        </div>
+
+    </footer>
+
+</body>
+
+</html>
